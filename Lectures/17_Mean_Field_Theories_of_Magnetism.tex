@@ -1,0 +1,50 @@
+\section[Mean Field Theories of Magnetism]{\hyperlink{toc}{Mean Field Theories of Magnetism}}
+
+The Ising Model
+Goal: Get Magnetization as a function of Temperature and Magnetic Field; $M(T,B)$
+\begin{itemize}
+    \item If we forget about spin interactions, Spins within a lattice will act as a paramagnet and try to align with an external field.
+    \[H_{p} = \sum_l  g \mu_B \vec{B} \cdot \vec{\sigma_l}\]
+    And can be simplified if we consider a given field direction.
+    \item We also can take into account the interactions between nearest neighbouring spins within a 2D lattice (summation will double counting, so divide by 2 on the outside):
+    \[H_{int} = -\frac{J}{2}\sum_{<i,j>} \sigma_i \sigma_j \]
+    \item if $J>0$ this is a ferromagnet and for $J<0$ this would be an antiferromagnet.
+    \item Ising grad student solved it in 1D (1925). And in 2D by Onsage (1945). Only solvable in 3D with more approximations (mean field theory approach). The combination of the two interactions that the Ising Model considered is:
+    \[H_{Ising} = g \mu_B B \sum_l \sigma_l - \frac{J}{2} \sum_{<i,j>} \sigma_i\sigma_j\]
+\end{itemize}
+
+\textbf{Mean-field theory for the Ising Model:}
+\begin{itemize}
+    \item Single out a subset of the system and then treat interactions with all other parts of the system as some sort of potential. In a sense averaging out all the interactions will give you the mean field.
+    \item Self-consistent result that is useful for a large number of particle systems.
+    \item Focussing on one spin at site i, the Hamiltonian is:
+    \[H_{i} = g \mu_B B \sigma_i - J \sigma_i \sum_{j\in N_i} \sigma_j\]
+    summing over all j that are nearest neighbours of i.
+    \item Next, we instead use the average over all the neighbours of i:
+    \[H_{i} \approx g \mu_B B \sigma_i - J \sigma_i \sum_{j\in N_i} \left<\sigma_j\right>\]
+    \item Solution gives us the transcendental equation which we can solve numerically or graphically:
+    \[\langle\sigma_i\rangle = \frac{1}{2} \tanh \left(\frac{ \beta J z \langle\sigma_i\rangle}{2}\right)\]
+    \item Solution shows that when T is large (small $\beta$) the curves only intersect at $\langle\sigma_i\rangle=0$ so that there is no average magnetization. 
+    \item When T is small, we enter a regime where curves intersect at three points. This shows spontaneous magnetization.
+    \item transition point between two behaviours happens when slopes are the same at small $\langle\sigma_i\rangle$
+    \item Make some simplifications and get a critical temperature:
+    \[T_c = \frac{J_z}{4k_B}\]
+\end{itemize}
+
+\textbf{(Spontaneous) Symmetry Breaking}
+\begin{itemize}
+    \item Free energy of the system as we pass through the $T_c$. Using $F = -k_B T \log Z$, we can compute this function as a function of $\langle \sigma_i\rangle$ from the partition function.
+    \item parabola (with min at 0) changes to camelback (with 2 mins on either side of 0, and a hump at 0) after going past $T_c$, the middle hump is an unstable point and system will lower energy by breaking symmetry and going to a non-zero magnetization -- i.e. spontaneously polarize.
+    \item Applying an external field explicitly breaks the symmetry and we can determine  the directions in which the spins align.
+    \item to Make Permanent Magnet from Iron: Heat above $T_c$, align with a strong field, then cool to a temperature below $T_c$.
+\end{itemize}
+
+\textbf{Itinerant Ferromagnetism}
+\begin{itemize}
+    \item Ising model said spins are fixed and can only interact; now this model spins can also hop (and still interact with each other).
+    \item electrons tend to exhibit this behaviour
+    \item The \textbf{Hubbard Model} describes electrons that hop through a tight-binding lattice, combined with interactions that occur if two electrons si on the same site of the lattice.
+    \item Tunnelling amplitude J (not same as Ising), and interaction energy if 2 electrons are on the same lattice site, U.
+    \[H_{interaction} = \sum_i U n_{i\uparrow} n_{i\downarrow}\]
+\end{itemize}
+

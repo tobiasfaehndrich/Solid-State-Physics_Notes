@@ -1,0 +1,52 @@
+\section[Einstein $\&$ Debye Models of a solid]{\hyperlink{toc}{Einstein $\&$ Debye Models of a solid}}
+
+
+\begin{itemize}
+    \item \textbf{Heat Capacities of Solids:}
+    \begin{itemize}
+        \item rate of change of energy with temp (@const Volume)
+        \[C = \frac{dE}{dt} \]
+        \item @ $T \gg 0 , \qquad C=3Nk$
+        \item Law of Dulong $\&$ Petit
+        \item Classically: Law of equipartition
+        \begin{itemize}
+            \item $C=\frac{k}{2}$ for each DOF in material.
+        \end{itemize}
+        \item $C_V \propto \alpha T^3 + \gamma T$
+        \begin{itemize}
+            \item Insulators: $\gamma=0$
+            \item Conductors: $\gamma\neq0$
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Einstein model of Solid}
+    \begin{itemize}
+        \item each atom in crystal vibrates independantly
+        \item assumed these were Harmonic Oscillators $E_n=\hbar \omega_E(n+\frac{1}{2})$
+        \item partition function
+        \[Z = \frac{exp(-\beta \hbar \omega_E /2}{1-exp(-\beta\hbar\omega_E)}\]
+        \[Z = \sum_r exp(-\beta E_r) \]
+        \[\bar{E} = -\frac{1}{Z} \frac{dZ}{dB} \]
+        \[ C_V = \left(\frac{\partial \bar{E}}{\partial T}\right)_V \]
+        \item Result
+        \[C_V=3Nk(\beta \omega_E \hbar)^2 \frac{e^{\beta \hbar \omega_E}}{(e^{\beta \hbar \omega_E}-1)^2}\]
+        \item $T\rightarrow \infty , \qquad C_V = 3Nk$ 
+        \item $T\rightarrow 0, \qquad C_V = 0 $
+        \item real solids go $T^3$ instead of exponentially
+        \item partially successful model $\rightarrow$ shape behaviour @ low temp was incorrect.
+    \end{itemize}
+    \item \textbf{Debye's Model}
+    \begin{itemize}
+        \item atoms coupled to each other in a solid
+        \item atoms vibrations generate sound waves
+        \item quantize! (can use planck's results for light quantization)
+        \item "phonons" vs photons
+        \begin{itemize}
+            \item described by wavevector k
+            \item longitudinal and transverse modes possible for phonons
+        \end{itemize}
+        \item Debye Temp $\theta = \frac{\hbar \omega_D}{k}$
+        \[C_V = \frac{12\pi^4}{5}Nk\left(\frac{T}{\theta_D}\right)^3\]
+        \[E~T^4 \qquad \therefore C_V~T^3\]
+        \item still not fully complete
+    \end{itemize}
+\end{itemize}

@@ -1,18 +1,24 @@
 \documentclass[10pt]{article}
+\usepackage[sc]{mathpazo}
 \usepackage{commands}
 \hypersetup{colorlinks = true}
+\let\oldphi\phi 
+\let\phi\varphi 
+\let\varphi\oldphi
+
+
 
 \begin{document}
 \begin{tcolorbox}
   \begin{center}
   \begin{Large}
-    \textbf{PHYS 203 Thermal Physics Textbook Notes} \\
+    \textbf{Introduction to Solid State Physics Notes} \\
     \vspace{5pt}
   \end{Large}
   \begin{large}
         Tobias Faehndrich \\
 \vspace{5pt}
-    \emph{This document was last edited on \today}
+    \emph{This document was typeset on \today}
   \end{large}
   \end{center}
 \end{tcolorbox}
@@ -20,20 +26,71 @@
 \begin{center}
   \textbf{Introduction:}
 
-Notes written while following the second year PHYS 203 thermal physics textbook by Schroeder in some spare time on the winter break (2020-2021). If any errors are found in the notes, feel free to email me at \href{mailto:tobias.faehndrich@gmail.com}{tobias.faehndrich@gmail.com}. Overleaf formatting was copied from Rio W.
+Notes written while following the upper-level undergraduate course taught at the University of Pittsburgh in the Fall 2015 semester by Sergey Frolov. The course is based on Steven Simon's "Oxford Solid State Basics" textbook. If any errors are found in the notes, feel free to email me at \href{mailto:tobias.faehndrich@gmail.com}{tobias.faehndrich@gmail.com}. Overleaf formatting was copied from Rio W.
 
 \end{center}
 \addtocontents{toc}{\protect\hypertarget{toc}{}}
 \tableofcontents
 
-\newpage
-\input{Chapters/1_Energy_in_Thermal_Physics}
 
 \newpage
-\input{Chapters/2_The_Second_Law}
+\input{Lectures/2_Quantum_Review}
 
 \newpage
-\input{Chapters/3_Interactions_and_Implications}
+\input{Lectures/3_Einstein_Debye_Models_of_a_solid}
 
+
+\newpage
+\input{Lectures/4_Drude_Sommerfeld_Theories_of_electrons_in_solids}
+
+
+\newpage
+\input{Lectures/5_1D_models_of_vibrations}
+
+
+\newpage
+\input{Lectures/6_The_1D_Tight_Binding_Model_for_Electron}
+
+
+\newpage
+\input{Lectures/7_Crystal_Structure}
+
+\newpage
+\input{Lectures/8_Reciprocal_Lattices}
+
+\newpage
+\input{Lectures/9_Scattering_Experiments_(X-ray_diffraction)}
+
+\newpage
+\input{Lectures/10_Electron_waves_in_crystals}
+
+\newpage
+\input{Lectures/11_Band_Structure_of_Electrons_in_Solids}
+
+
+\newpage
+\input{Lectures/12_Physics_of_Semiconductors_(and_metals_and_insulators)}
+
+\newpage
+\input{Lectures/13_Graphene_and_Carbon_Nanotubes}
+
+\newpage
+\input{Lectures/14_Semiconductor_Devices}
+
+\newpage
+\input{Lectures/15_Paramagnetism_and_Diamagnetism}
+
+
+\newpage
+\input{Lectures/16_Magnetic_Order}
+
+\newpage
+\input{Lectures/17_Mean_Field_Theories_of_Magnetism}
+
+\newpage
+\input{Lectures/18_Superconductivity_Experiments}
+
+\newpage
+\input{Lectures/21_Physics_of_Low-Dimension_Systems:_2D}
 
 \end{document}
