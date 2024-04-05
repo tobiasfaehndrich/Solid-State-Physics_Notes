@@ -1,0 +1,244 @@
+\def \secname {}
+
+\section[\secname]{\hyperlink{toc}{\secname}}
+
+
+
+
+\subsection{Temperature}
+
+\textbf{At equilibrium}
+\begin{equation}
+\frac{\partial S_A}{\partial U_A} = \frac{\partial S_B}{\partial U_B}
+\end{equation}
+
+The slope of their entropy vs energy graphs are the same for both systems when they're in thermal equilibrium. This must be related to the temperature of a system.
+
+Energy will tend to flow \textbf{into} the object with the \textbf{steeper} S vs U graph, and \textbf{out} of the object with the \textbf{shallower} S vs U graph.
+
+\textbf{Steep Slope -- Low Temperature}
+
+\textbf{Shallow Slope -- High Temperature}
+
+$\therefore$ The Temperature of a system is the reciprocal of the slope of it's entropy vs energy graph. The partial derivative is to be taken with the systems volume and number of particles fixed.
+\begin{shaded}
+New Definition of Temperature:
+\begin{equation}
+    T \equiv \left( \frac{\partial S}{\partial U} \right)^{-1} \text{   or   } \frac{1}{T} = \left(\frac{\partial S}{\partial U}\right)_{U, V}
+\end{equation}
+\end{shaded}
+
+\textbf{Silly Analogy}: money is energy, happiness is entropy, and generosity is temperature.
+
+\subsection{Entropy and Heat}
+
+\textbf{Steps to Predicting Heat Capacities}
+
+1. Use quantum mechanics and some combinatorics to find an expression for the multiplicity, $\Omega$, in terms of U, V, N and any other relevant variables.\\
+2. Take the logarithm to find entropy, S.\\
+3. Differentiate S with respect to U and take the Reciprocal to find the temperature, T, as a function of U and other variables.\\
+4. Solve for U as a function of T (and other variables)\\
+5. Differentiate U(t) to obtain a prediction for the heat capacity (with the other variables held fixed).
+
+(main examples: two-state paramagnet, Einstein Solid, and the monatomic ideal gas.)
+
+\textbf{Einstein Solid}; $q \gg N$; $U=NkT$
+\[C_V = \frac{\partial}{\partial T}(NkT) = Nk\]
+
+\textbf{Monatomic Ideal Gas}; $U=\frac{3}{2}NkT$
+\[C_V = \frac{\partial}{\partial T}(\frac{3}{2}NkT) = \frac{3}{2}Nk\]
+
+\textbf{Measuring Entropies}
+
+from $\frac{dS}{dU}=\frac{1}{T}$ and $dU = Q + \cancel{W} $ we see that:
+
+\begin{equation}
+    dS = \frac{dU}{T} = \frac{Q}{T} ; \text{constant volume, no work}
+\end{equation}
+
+$dS = \frac{Q}{T}$ is also true when the volume is changing provided that the process is quasistatic.
+
+When T is changing it is easier to write/use:
+\[dS = \frac{C_V dT}{T}\]
+\begin{equation}
+ \Delta S = S_f - S_i = \int_{T_i}^{T_f} \frac{C_v}{T}dT
+\end{equation}
+
+"The Third Law of Thermodynamics"
+
+To find system's total Energy, simply take $T=0$ for lower limit. In principle S(0) is 0 because it is absolute 0 Kelvin (i.e. $\Omega = 1$).
+
+as $C_V \rightarrow 0$, $T \rightarrow 0$
+
+\textbf{The Macroscopic View of Entropy}
+
+If one system loses some entropy as heat flows out, another system will gain even more entropy (as heat enters into it).
+
+\subsubsection{Paramagnetism}
+
+We will look at the harder problem of the two-state paramagnet. Dipoles spin is quantized, either up or down. Ideal paramagnet, there is no interactions between dipoles, only effected by magnetic field.
+
+\begin{equation}
+    U_{total} = \mu B(N\downarrow - N\uparrow) = \mu B(N-2N\uparrow)
+\end{equation}
+
+\begin{equation}
+    M = \mu (N\uparrow - N\downarrow) = \frac{-U}{B}
+\end{equation}
+
+\begin{equation}
+    \Omega (N\uparrow) = \frac{N!}{N\uparrow!N\downarrow!}
+\end{equation}
+
+\begin{note}
+lots of counter-intuitive results p.100-103
+\end{note}
+
+\textbf{Numerical Solution}
+
+we find that multiplicity and thus entropy is \textbf{greatest} when $U = 0$; half $N\uparrow $ and half $N\downarrow$.
+
+\textbf{Analytic Solution}
+\begin{equation}
+    \frac{S}{k} = N\ln(N) - N\uparrow \ln(N\uparrow) - (N-N\uparrow)\ln(N-N\uparrow)
+\end{equation}
+
+\begin{equation}
+\frac{1}{T} = \frac{k}{2\mu B}\ln\left(\frac{N-U/(\mu B)}{N+U/(\mu B)}\right)  
+\end{equation}
+
+\begin{equation}
+    U = N \mu B \left( \frac{1-e^{2\mu B/kT}}{1+e^{2\mu B/kT}}\right) = -N\mu B \tanh{\left(\frac{\mu B}{kT}\right)}
+\end{equation}
+
+\begin{equation}
+    M = N \mu \tanh{\left(\frac{\mu B}{kT}\right)} ; \text{as T $\rightarrow$ $\infty$, M $\rightarrow$ 0}
+\end{equation}
+
+
+\begin{equation}
+    C_B = \left(\frac{\partial U}{\partial T}\right)_{N, B} = Nk \frac{(\mu B/kT)^2}{\cosh^2{(\mu B/kT)}}
+\end{equation}
+
+\textbf{Where $\mu$ is the Bohr Magneton}
+\[\mu_B \equiv \frac{eh}{4\pi m_e} = 9.274 \times 10^{-24} \frac{J}{T} = 5.788 \times 10^{-5} \frac{eV}{T}\]
+
+e is electron charge = $1.602 \times 10^{-19}$
+
+$m_e$ is electron mass = $9.11 \times 10^{-31}$
+
+
+\textbf{Hyperbolic Trig Functions}
+\begin{equation*}
+\begin{split}
+   \sinh{x} = \frac{1}{2}(e^x - e^{-x})\\
+   \cosh{x} = \frac{1}{2}(e^x + e^{-x})\\
+   \tanh{x} = \frac{\sinh{x}}{\cosh{x}}
+\end{split}
+\end{equation*}
+
+\textbf{using $tanh{x} \approx x$ for $x \ll 1$ we get:}
+
+\[M \approx \frac{N\mu ^2 B}{kT} \]
+
+\textbf{Currie's Law (Pierre Curie)}
+
+$M \propto \frac{1}{T}$
+
+This holds for high temperature limit for paramagnets.
+
+\subsection{Mechanical Equilirium and Pressure}
+
+\textbf{Pressure}
+
+\begin{equation}
+    P = T \left(\frac{\partial S}{\partial V} \right)_{V, N}
+\end{equation}
+
+
+\textbf{The Thermodynamic Identity}
+$dS = \frac{1}{T}dU + \frac{P}{T} dV$
+
+(assuming number of particles is fixed)
+
+\begin{equation}
+    dU = TdS - PdV
+\end{equation}
+
+\textbf{Entropy and Heat Revisited}
+\begin{note}
+Recall FLTD; $dU = Q + W$, where $W= -PdV$ so we find that:
+\end{note}
+
+\begin{equation}
+    Q = TdS \text{; (if quasistatic)}
+\end{equation}
+
+or $dS = \frac{Q}{T}$ ; even if work is being done on it during the process.
+
+\textbf{Isentropic - } \textbf{adiabatic} (compress fast enough so that gas heats up) and \textbf{quasistatic}3 (compress slow enough that the particles are able to constantly equilibrate)
+
+Watch out if system is not quasistatic. ex: very fast compression that creates internal disequilibrium (work you do on gas is greater than $-PdV$). Also free expansion into a vacuum.
+
+\subsection{Diffusive Equilibrium and Chemical Potential}
+
+\textbf{Thermal Equilibrium} $\rightarrow$ same temp
+
+\textbf{Mechanical Equilibrium} $\rightarrow$ same pressure
+
+\textbf{Chemical Potential $\mu$:}
+
+\begin{equation}
+    \mu \equiv -T \left(\frac{\partial S}{\partial N}\right)_{U,V}
+\end{equation}
+
+$\mu_A = \mu_B$ at equilibrium
+
+$\therefore$ diffusive equilibriu, $\rightarrow$ same chemical potential
+
+Particles tend to flow from the system with higher $\mu$ into the system with the lower $\mu$.
+
+Adding this to the thermodynamic identity, we find:
+\begin{equation}
+  dU = TdS - PdV + \mu dN  
+\end{equation}
+
+Where
+\begin{equation*}
+\begin{split}
+-PdV = \text{mechanical work}\\
+\mu dN = \text{chemical work}
+\end{split}
+\end{equation*}
+
+\begin{note}
+If system contains several types of particles (i.e. like air) then each molecular specie has it's own chemical potential.
+
+We also see:
+\end{note}
+\[ \mu = \left(\frac{\partial U}{\partial N}\right)_{S,V}\]
+
+\textbf{$\therefore$ Generalized Thermodynamic Identity}
+
+\begin{equation}
+    dU = TdS - PdV + \sum \mu_i dN_i
+\end{equation}
+(Where the sum runs over all species, i =1,2,3...)
+
+\subsection{Summary and Look Ahead}
+
+\textbf{"Entropy tends to increase!!!!"}
+
+\begin{tabular}{ |p{3.5cm}|p{3.5cm}|p{3.5cm}|p{3cm}|  }
+ \hline
+ \multicolumn{4}{|c|}{Overview} \\
+ \hline
+ Type of Interaction & Exchanged Quantity & Governing Variable & Formula\\
+ \hline
+ Thermal   & Energy    & Temperature &   $\frac{1}{T} = \left(\frac{\partial S}{\partial U}\right)_{V,N} $\\
+ Mechanical &   Volume  & Pressure   & $\frac{P}{T} = \left(\frac{\partial S}{\partial V}\right)_{U,N} $\\
+ Diffusive & Particles & Chemical Potential & $\frac{\mu}{T} = -\left(\frac{\partial S}{\partial N}\right)_{V,U} $\\
+ \hline
+\end{tabular}
+
+\textbf{3 key model systems:}\\ - the Two State Paramagnet\\ - the Einstein Solid\\ - the Monatomic Ideal Gas.

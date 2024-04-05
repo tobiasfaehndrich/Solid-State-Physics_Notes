@@ -1,0 +1,649 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}	% Para caracteres en español
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{multirow,booktabs}
+\usepackage[table]{xcolor}
+\usepackage{fullpage}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage{calc}
+\usepackage{multicol}
+\usepackage{cancel}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[margin=3cm]{geometry}
+\usepackage{amsmath}
+\newlength{\tabcont}
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+\usepackage{empheq}
+\usepackage{framed}
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+\colorlet{shadecolor}{orange!15}
+\parindent 0in
+\parskip 12pt
+\geometry{margin=1in, headsep=0.25in}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{reg}{Rule}
+\newtheorem{exer}{Exercise}
+\newtheorem{note}{Note}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+{\LARGE \bf Thermodynamics Study Notes}\\
+{\large Physics 203}\\
+Spring 2021\\
+Tobias Faehndrich
+\end{center}
+\section{Energy in Thermal Physics}
+
+
+\subsection{Thermal Equilibrium}
+\textbf{Temperature} (operational definition): What you measure with a thermometer
+
+\textbf{Temperature} (theoretical definition): The thing that is the same for two objects, after they've been in contact long enough
+
+\textbf{Thermal Equilibrium}: 2 objects in contact for long enough
+
+\textbf{Relaxation Time}: Time taken to get to thermal equilibrium. (technically time to drop by a factor if e)
+
+\textbf{Diffusive Equilibrium}: ex. cream and coffee mixing; exchange of \textbf{particles}
+
+\textbf{Mechanical Equilibrium}: ex. expansion of balloon; exchange of \textbf{volume}
+
+\subsection{The Ideal Gas}
+\begin{shaded}
+\textbf{The Famous Ideal Gas Law} \newline
+\begin{equation}
+PV = nRT
+\end{equation}
+Where:
+\begin{equation*}
+\begin{split}
+P = \text{Pressure} \\
+V = \text{Volume} \\
+n = \text{number of moles of the gas}\\
+R = \text{Universal Constant; 8.31}\frac{J}{mol K}\\
+T = \text{Temperature in Kelvins}
+\end{split}
+\end{equation*}
+\end{shaded}
+
+\textbf{Conversions and Constants}:
+
+\[\text{Pa (pascals, SI base units for pressure)} = \frac{N}{m^2}\]
+\[1 \text{atm} = 1.013 \text{bar} = 1.013 \times 10^{5} Pa\]
+\[1 \text{bar} = 10^5Pa\]
+\[1 L = 0.001m^3\]
+\[1 mL = 1cm^3\]
+\[ 1eV = 1.602 \times 10^{-19}J\]
+\[ (\text{T in }^\circ C) = (\text{T in K}) - 273.15\]
+\[ (\text{T in }^\circ F) = \frac{9}{5}(\text{T in }^\circ C) +32\]
+\[1 \text{cal} = 4.186J\]
+\[1 u = 1.661 \times 10^{-27} kg\]
+
+\textbf{Boltzmann Constant:}
+\[k= 1.3806488 \times 10^{-23} \frac{J}{K}\ = 8.62 \times 10^{-5}\frac{eV}{K}\]
+\textbf{Avogadro's Number:}
+\[N_A = 6.02 \times 10^{23}\]
+\textbf{Gas Universal Constant:}
+\[R = k N_A = 8.3144621 \frac{J}{mol K}\]
+
+\textbf{Alternate Ideal Gas Law:}
+\[PV = NkT\]
+
+\[nR = Nk\]
+
+
+\subsection{The Equipartition of Energy}
+\begin{shaded}
+\textbf{Equipartition Theorem}\newline 
+At temp T, the average energy of an quadratic degree of freedom is $\frac{1}{2}kT$
+
+\begin{equation}
+U_{thermal} = Nf \frac{1}{2} kT
+\end{equation}
+Where:
+\begin{equation*}
+\begin{split}
+N = \text{Number of molecules} \\
+f = \text{Number of degrees of freedom} \\
+k = \text{Boltzmann Constant}\\
+T = \text{Temperature in Kelvins}
+\end{split}
+\end{equation*}
+\end{shaded}
+\begin{note}
+
+\textbf{$N_2$ and $O_2$ have f=5, Gas of Monatomic Molecules like Helium or Argon f=3, Solids have f=6}
+\end{note}
+
+
+\subsection{Heat and Work}
+\textbf{Heat} - Spontaneous Flow of energy from one object to another, caused by difference in temperature between objects \newline
+\textbf{Work} - Any other transfer of energy. Usually can identify external agent that actively puts energy into system.\newline
+\textbf{Energy} - Most fundamental dynamical concept in physics. Cannot be created or destroyed.\newline
+\textbf{Temperature} - Fundamentally an objects tendency to spontaneously give up energy \newline
+
+\begin{shaded}
+\textbf{The First Law of Thermodynamics}\newline 
+Essentially Conservation of Energy
+
+\begin{equation}
+dU = Q + W
+\end{equation}
+Where:
+\begin{equation*}
+\begin{split}
+U = \text{total energy inside a system} \\
+Q = \text{amount of energy that enters system as heat} \\
+W = \text{amount of energy that enters system as work}\\
+\end{split}
+\end{equation*}
+\end{shaded}
+
+
+\textbf{Heat Transfer Categories:} \\
+\textbf{Conduction}: molecular contact/bumping and transferring energy \\
+\textbf{Convection}: bulk motion of gas/liquid (usually warmer rises) \\
+\textbf{Radiation}: emission of EM waves, mostly infrared for objects at room temp but also visible for hot objects like lightbulbs.
+
+
+\subsection{Compression Work}
+\textbf{Quasistatic} - if piston is compressed slowly, gas has time to continually equilibrate to changing conditions (never perfectly).
+
+\begin{equation}
+W = -P \Delta V
+\end{equation}
+
+If pressure changes as you change the volume (still quasistatic):
+
+\begin{equation}
+    W = - \int_{V_i}^{V_f} P(V) dV
+\end{equation}
+
+\textbf{Isothermal Compression} - Compress gas slow that the temperature of th egas doesn't rise at all.
+\textbf{Adiabatic Compression} - Compress gas so fast that no heat escapes from gas during process.
+
+\subsection{Heat Capacities}
+
+\textbf{Heat Capacity} - The amount of heat needed to raise it's temperature, per degree temperature increase.
+\[C \equiv \frac{Q}{\Delta T} = \frac{\Delta U - W}{\Delta T}\]
+
+\textbf{Specific Heat Capacity} - Heat capacity per unit mass.
+\[c \equiv \frac{C}{m}\]
+\begin{shaded}
+\textbf{Heat Capacity at Constant Volume}
+\begin{equation}
+C_V = \left(\frac{\Delta U}{\Delta T}\right)_V = \left(\frac{\partial U}{\partial T}\right)_V
+\end{equation}
+\end{shaded}
+
+\textbf{Heat Capacity at Constant Pressure}
+\begin{equation}
+C_P = \left(\frac{\Delta U - (-P\Delta V)}{\Delta T}\right)_P = \left(\frac{\partial U}{\partial T}\right)_P + P\left(\frac{\partial V}{\partial T}\right)_P
+\end{equation}
+\textbf{Recall}
+Section 1.3 - Equipartition Theorem: $U_{thermal} = Nf \frac{1}{2} kT$
+\begin{note}
+$C_V$ for monatomic gas (f=3) (ex Helium) is $\frac{3}{2}Nk=\frac{3}{2}nR$. 
+
+\hspace{15mm} \textbf{Rule of Dulong and Petit} Heat capacity per mole for solid (f=6) is $3Nk=3nR$. 
+\end{note}
+
+\begin{shaded}
+\textbf{Heat capacity at constant pressure for Ideal Gas}
+\begin{equation}
+    C_P = C_V + Nk = C_V + nR
+\end{equation}
+\end{shaded}
+
+\textbf{Latent Heat}
+\textbf{phase transformation} - ex. melting ice or boiling water
+
+At phase transformation you can put heat into system without increasing the temperature.
+\[C=\frac{Q}{\Delta T} = \frac{Q}{0} = \infty\]
+Heat capacity is infinite during a phase transformation
+
+\textbf{Latent Heat} - How much heat is required for transformation (ex. melting water)
+\[ L \equiv \frac{Q}{m} \]
+\begin{note}
+By convention we assume pressure is constant (usually at 1 atm) and that no other work is being done besides the usual constant-pressure expansion/compression.
+\end{note}
+\textbf{Reference}:\\
+L for melting ice $ = 333\frac{J}{g}  = 80\frac{\text{cal}}{g}$ \\
+L for boiling water $ = 2260\frac{J}{g}  = 540\frac{\text{cal}}{g}$ \\
+Raising Water 0 to 100 requires only $100\frac{\text{cal}}{g}$
+
+\begin{shaded}
+\textbf{Enthalpy}
+\[H \equiv U + PV\]
+\begin{equation}
+    \Delta H = Q + W_{other} \text{ \hspace{10mm} ; constant P}
+\end{equation}
+\end{shaded}
+
+$\therefore$ for simple case of raising object's temperature:
+\[C_P = \left(\frac{\partial H}{\partial T}\right)_P \]
+
+\subsection{Rates of Processes}
+Not entirely thermodynamics, but related. "Transport Theory or Kinetics"\\
+Review this Chapter only if required
+
+\section{The Second Law}
+"Irreversible processes are not inevitible, they are just overwhelmingly probable."
+
+\subsection{Two-State System}
+\textbf{Microstate} - each different possible outcome in a system (ex. flipping 3 coins)\\
+\textbf{Macrostate} - a more general specification of the outcome\\
+\textbf{Multiplicity} - the number of microstates corresponding to a given macrostate. ($\Omega$ ; Omega)
+
+(total multiplicity of all macrostates is the total number of microstates)
+
+probability of n heads = $\frac{\Omega (n)}{\Omega (\text{all})}$
+
+$\Omega (N,n) = \frac{N!}{n!(N-n)!}$ ; nCr button on calculator
+
+\textbf{The Two-State Paramagnet}\\
+Dipoles: individual magnetic particles, either $\uparrow$ or $\downarrow$
+\[ \Omega (N\downarrow) = \Omega (N\uparrow) = \frac{N!}{N\uparrow!N\downarrow!} \]
+
+\subsection{The Einstein Model of a Solid}
+\[ \Omega (N,q) = \frac{(q+N-1)!}{q!(N-1)!}\]
+
+\subsection{Interacting Systems}
+
+ All \textbf{microstates are equally probably} BUT some \textbf{macrostates are much more probable} than others.
+ 
+ The spontaneous flow of energy stops when a system is at (or very near) it's most likely macrostate (i.e. the macrostate with greatest multiplicity)
+ 
+ \subsection{Large Systems}
+ 
+ Out of all the macrostates only a tiny fraction are reasonably probable.
+
+\textbf{Small Numbers} - like 6, 23 and 42
+
+\textbf{Large Numbers} - like Avogadro's Number, frequently made by exponentiating small numbers (ex. $10^{23}$). Adding a small number to a large number does not change the large number.\\
+\[10^{23} +23 = 10^{23} \]
+
+(exception for when you subtract the same large number: $10^{23} + 42 - 10^{23} = 42$)
+
+\textbf{Very Large Numbers} - made by exponentiating large numbers.
+(ex: $10^{10^{23}}$). You can multiply them by a Large number without changing them.
+\[10^{10^{23}} \times 10^{23} = 10^{10^{23}+23} =10^{10^{23}} \]
+
+\textbf{Other Useful Approximations}:
+
+\[\ln(1+x) \approx x ; \abs{x} \ll 1\]
+\[\ln(a+b) \approx \ln(a) + \frac{b}{a} ; b\ll a \]
+
+\begin{shaded}
+\textbf{Stirling's Approximation}
+\begin{equation}
+N! \approx N^Ne^{-N} \sqrt{2\pi N} ; N \gg 1
+\end{equation}
+Most of the time we can just use: 
+\[\ln{N!} \approx N\ln(N) - N\]
+\end{shaded}
+\newpage 
+
+\textbf{Multiplicity of Large Einstein Solids:}
+
+\[ \Omega (N,q) \approx e^{N\ln\left(\frac{q}{N}\right)} e^N = \left(\frac{eq}{N}\right)^N ; q \gg N \]
+
+\textbf{Thermodynamic Limit} - the limit where a system becomes infinitely large so that fluctuations away from the most likely macrostate never occur.
+
+\subsection{Ideal Gas}
+" Only a tiny fraction of the macrostates of a large interacting system have a reasonably large probabilities. "
+
+\[ \Omega (U,V,N) = f(N) V^N U^{\frac{3N}{2}} \]
+where f(N) is a complicated function of N
+
+\textbf{Interacting Ideal Gas:}
+\[ \Omega_{total} (U,V,N) = [f(N)]^2 (V_A V_B)^N (U_A U_B)^{\frac{3N}{2}} \]
+
+3D Width of Peak (U) = $\frac{U_{total}}{\sqrt{\frac{3N}{2}}}$
+
+3D Width of Peak (V) = $\frac{V_{total}}{\sqrt{N}}$
+
+\subsection{Entropy}
+Any large system in equilibrium will be found in the macrostate with the greatest multiplicity (aside from fluctuations that are normally too small to measure).
+
+i.e. Multiplicity tends to increase.
+
+\begin{shaded}
+\textbf{Entropy}
+\begin{equation}
+    S \equiv k\ln\Omega
+\end{equation}
+\end{shaded}
+" The logarithm of the number of ways of arranging things in the system, (times the Boltzmann Constant) "
+
+Generally the more particles there are in a system and the more energy it contains; the greater it's multiplicity and it's entropy.
+
+Other ways of increasing the Entropy of a system:\\
+- letting it expand into a larger space \\
+- breaking large molecules apart into smaller ones\\
+- mixing substances that were once separated
+
+\[ \text{Entropy} \approx \text{"disorder"} \]
+but be CAREFUL! 
+Glass of Ice vs Glass of equal amount of liquid water:
+
+Water has much more Entropy since there are so many more ways of arranging the molecules and so many more ways of arranging the larger amount of energy.
+
+Restate the Second Law of Thermodynamics:
+
+"Any large system in equilibrium will be found in the macrostate with the greatest \textbf{entropy} (aside from fluctuations that are normally too small to measure)."
+
+i.e. Entropy tends to increase
+
+\begin{shaded}
+\textbf{Entropy for an Ideal Gas}\\
+\textit{Sackur-Tetrode Equation:}
+\begin{equation}
+    S = Nk\left[\ln\left(\frac{V}{N} \left(\frac{4\pi m U}{3Nh^2}\right)^{\frac{3}{2}}\right)+\frac{5}{2} \right]
+\end{equation}
+\begin{note}
+The Entropy of a monatomic ideal gas, derived from Stirling's approximation and large number approximations
+\end{note}
+Where:
+\begin{equation*}
+\begin{split}
+N = \text{Number of gas molecules} \\
+k = \text{Boltzmann Constant} \\
+V = \text{Volume in}m^3 \\
+m = \text{mass in kg} \\
+U = \text{Total Energy} \\
+h = \text{Planck's Constant}
+\end{split}
+\end{equation*}
+\end{shaded}
+
+$\therefore$ The entropy of an ideal gas depends on it's volume, energy, and # of particles. 
+
+\begin{equation}
+    \Delta S = Nk\ln\left(\frac{V_f}{V_i}\right)  ; \hspace{10mm} \text{(U, N fixed)}
+\end{equation}
+
+ \newpage
+ For example:
+ 
+ \textbf{Free Expansion} - Gas separated by a partition from an evacuated chamber. We then puncture the partition, letting the gas freely expand to fill the whole available space. ($\Delta U = Q+W = 0+0 = 0$ and no new particles are added so $\Delta N = 0$ also)
+
+
+\textbf{Entropy of Mixing}
+- Mixing two different ideal gases 50/50 chambers
+\begin{equation}
+    \Delta S_{total} = \Delta S_A + \Delta S_B = 2Nk\ln(2)
+\end{equation}
+
+\textbf{Gibbs Paradox} - if we assume the molecules in gas are distinguishable, this leads to the second law being violated, i.e. entropy decreases. In reality scientist believe that molecules in gas are indistinguishable from one another which upholds the law as shown in the Sackur-Tetrode Equation.
+
+
+\textbf{Reversible and Irreversible Processes}
+If a physical process increases the total entropy of the universe, that process cannot happen in reverse.
+
+\textbf{Irreversible} - processes that create new entropy. ex: free expansion of a gas (very sudden)
+
+\textbf{Reversible} - process that leaves the total entropy of the universe unchanged. ex: gradual compression or expansion (must be quasistatic)
+
+\begin{note}
+No macroscopic process is perfectly reversible, some come close
+\end{note}
+
+Heat flow is always irreversible
+
+\textbf{Other highly irreversible processes:} Sunlight warming the earth, wood burning in the fireplace, metabolism of nutrients in our bodies, mixing of ingredients in the kitchen.
+
+Beginning of time -- super low-entropy, and now on our way to equilibrium but still a long time away from boring homogeneous fluid universe with max entropy ("heat death of the universe").
+
+\section{Interactions and Implications}
+
+\subsection{Temperature}
+
+\textbf{At equilibrium}
+\begin{equation}
+\frac{\partial S_A}{\partial U_A} = \frac{\partial S_B}{\partial U_B}
+\end{equation}
+
+The slope of their entropy vs energy graphs are the same for both systems when they're in thermal equilibrium. This must be related to the temperature of a system.
+
+Energy will tend to flow \textbf{into} the object with the \textbf{steeper} S vs U graph, and \textbf{out} of the object with the \textbf{shallower} S vs U graph.
+
+\textbf{Steep Slope -- Low Temperature}
+
+\textbf{Shallow Slope -- High Temperature}
+
+$\therefore$ The Temperature of a system is the reciprocal of the slope of it's entropy vs energy graph. The partial derivative is to be taken with the systems volume and number of particles fixed.
+\begin{shaded}
+New Definition of Temperature:
+\begin{equation}
+    T \equiv \left( \frac{\partial S}{\partial U} \right)^{-1} \text{   or   } \frac{1}{T} = \left(\frac{\partial S}{\partial U}\right)_{U, V}
+\end{equation}
+\end{shaded}
+
+\textbf{Silly Analogy}: money is energy, happiness is entropy, and generosity is temperature.
+
+\subsection{Entropy and Heat}
+
+\textbf{Steps to Predicting Heat Capacities}
+
+1. Use quantum mechanics and some combinatorics to find an expression for the multiplicity, $\Omega$, in terms of U, V, N and any other relevant variables.\\
+2. Take the logarithm to find entropy, S.\\
+3. Differentiate S with respect to U and take the Reciprocal to find the temperature, T, as a function of U and other variables.\\
+4. Solve for U as a function of T (and other variables)\\
+5. Differentiate U(t) to obtain a prediction for the heat capacity (with the other variables held fixed).
+
+(main examples: two-state paramagnet, Einstein Solid, and the monatomic ideal gas.)
+
+\textbf{Einstein Solid}; $q \gg N$; $U=NkT$
+\[C_V = \frac{\partial}{\partial T}(NkT) = Nk\]
+
+\textbf{Monatomic Ideal Gas}; $U=\frac{3}{2}NkT$
+\[C_V = \frac{\partial}{\partial T}(\frac{3}{2}NkT) = \frac{3}{2}Nk\]
+
+\textbf{Measuring Entropies}
+
+from $\frac{dS}{dU}=\frac{1}{T}$ and $dU = Q + \cancel{W} $ we see that:
+
+\begin{equation}
+    dS = \frac{dU}{T} = \frac{Q}{T} ; \text{constant volume, no work}
+\end{equation}
+
+$dS = \frac{Q}{T}$ is also true when the volume is changing provided that the process is quasistatic.
+
+When T is changing it is easier to write/use:
+\[dS = \frac{C_V dT}{T}\]
+\begin{equation}
+ \Delta S = S_f - S_i = \int_{T_i}^{T_f} \frac{C_v}{T}dT
+\end{equation}
+
+"The Third Law of Thermodynamics"
+
+To find system's total Energy, simply take $T=0$ for lower limit. In principle S(0) is 0 because it is absolute 0 Kelvin (i.e. $\Omega = 1$).
+
+as $C_V \rightarrow 0$, $T \rightarrow 0$
+
+\textbf{The Macroscopic View of Entropy}
+
+If one system loses some entropy as heat flows out, another system will gain even more entropy (as heat enters into it).
+
+\subsubsection{Paramagnetism}
+
+We will look at the harder problem of the two-state paramagnet. Dipoles spin is quantized, either up or down. Ideal paramagnet, there is no interactions between dipoles, only effected by magnetic field.
+
+\begin{equation}
+    U_{total} = \mu B(N\downarrow - N\uparrow) = \mu B(N-2N\uparrow)
+\end{equation}
+
+\begin{equation}
+    M = \mu (N\uparrow - N\downarrow) = \frac{-U}{B}
+\end{equation}
+
+\begin{equation}
+    \Omega (N\uparrow) = \frac{N!}{N\uparrow!N\downarrow!}
+\end{equation}
+
+\begin{note}
+lots of counter-intuitive results p.100-103
+\end{note}
+
+\textbf{Numerical Solution}
+
+we find that multiplicity and thus entropy is \textbf{greatest} when $U = 0$; half $N\uparrow $ and half $N\downarrow$.
+
+\textbf{Analytic Solution}
+\begin{equation}
+    \frac{S}{k} = N\ln(N) - N\uparrow \ln(N\uparrow) - (N-N\uparrow)\ln(N-N\uparrow)
+\end{equation}
+
+\begin{equation}
+\frac{1}{T} = \frac{k}{2\mu B}\ln\left(\frac{N-U/(\mu B)}{N+U/(\mu B)}\right)  
+\end{equation}
+
+\begin{equation}
+    U = N \mu B \left( \frac{1-e^{2\mu B/kT}}{1+e^{2\mu B/kT}}\right) = -N\mu B \tanh{\left(\frac{\mu B}{kT}\right)}
+\end{equation}
+
+\begin{equation}
+    M = N \mu \tanh{\left(\frac{\mu B}{kT}\right)} ; \text{as T $\rightarrow$ $\infty$, M $\rightarrow$ 0}
+\end{equation}
+
+
+\begin{equation}
+    C_B = \left(\frac{\partial U}{\partial T}\right)_{N, B} = Nk \frac{(\mu B/kT)^2}{\cosh^2{(\mu B/kT)}}
+\end{equation}
+
+\textbf{Where $\mu$ is the Bohr Magneton}
+\[\mu_B \equiv \frac{eh}{4\pi m_e} = 9.274 \times 10^{-24} \frac{J}{T} = 5.788 \times 10^{-5} \frac{eV}{T}\]
+
+e is electron charge = $1.602 \times 10^{-19}$
+
+$m_e$ is electron mass = $9.11 \times 10^{-31}$
+
+
+\textbf{Hyperbolic Trig Functions}
+\begin{equation*}
+\begin{split}
+   \sinh{x} = \frac{1}{2}(e^x - e^{-x})\\
+   \cosh{x} = \frac{1}{2}(e^x + e^{-x})\\
+   \tanh{x} = \frac{\sinh{x}}{\cosh{x}}
+\end{split}
+\end{equation*}
+
+\textbf{using $tanh{x} \approx x$ for $x \ll 1$ we get:}
+
+\[M \approx \frac{N\mu ^2 B}{kT} \]
+
+\textbf{Currie's Law (Pierre Curie)}
+
+$M \propto \frac{1}{T}$
+
+This holds for high temperature limit for paramagnets.
+
+\subsection{Mechanical Equilirium and Pressure}
+
+\textbf{Pressure}
+
+\begin{equation}
+    P = T \left(\frac{\partial S}{\partial V} \right)_{V, N}
+\end{equation}
+
+
+\textbf{The Thermodynamic Identity}
+$dS = \frac{1}{T}dU + \frac{P}{T} dV$
+
+(assuming number of particles is fixed)
+
+\begin{equation}
+    dU = TdS - PdV
+\end{equation}
+
+\textbf{Entropy and Heat Revisited}
+\begin{note}
+Recall FLTD; $dU = Q + W$, where $W= -PdV$ so we find that:
+\end{note}
+
+\begin{equation}
+    Q = TdS \text{; (if quasistatic)}
+\end{equation}
+
+or $dS = \frac{Q}{T}$ ; even if work is being done on it during the process.
+
+\textbf{Isentropic - } \textbf{adiabatic} (compress fast enough so that gas heats up) and \textbf{quasistatic}3 (compress slow enough that the particles are able to constantly equilibrate)
+
+Watch out if system is not quasistatic. ex: very fast compression that creates internal disequilibrium (work you do on gas is greater than $-PdV$). Also free expansion into a vacuum.
+
+\subsection{Diffusive Equilibrium and Chemical Potential}
+
+\textbf{Thermal Equilibrium} $\rightarrow$ same temp
+
+\textbf{Mechanical Equilibrium} $\rightarrow$ same pressure
+
+\textbf{Chemical Potential $\mu$:}
+
+\begin{equation}
+    \mu \equiv -T \left(\frac{\partial S}{\partial N}\right)_{U,V}
+\end{equation}
+
+$\mu_A = \mu_B$ at equilibrium
+
+$\therefore$ diffusive equilibriu, $\rightarrow$ same chemical potential
+
+Particles tend to flow from the system with higher $\mu$ into the system with the lower $\mu$.
+
+Adding this to the thermodynamic identity, we find:
+\begin{equation}
+  dU = TdS - PdV + \mu dN  
+\end{equation}
+
+Where
+\begin{equation*}
+\begin{split}
+-PdV = \text{mechanical work}\\
+\mu dN = \text{chemical work}
+\end{split}
+\end{equation*}
+
+\begin{note}
+If system contains several types of particles (i.e. like air) then each molecular specie has it's own chemical potential.
+
+We also see:
+\end{note}
+\[ \mu = \left(\frac{\partial U}{\partial N}\right)_{S,V}\]
+
+\textbf{$\therefore$ Generalized Thermodynamic Identity}
+
+\begin{equation}
+    dU = TdS - PdV + \sum \mu_i dN_i
+\end{equation}
+(Where the sum runs over all species, i =1,2,3...)
+
+\subsection{Summary and Look Ahead}
+
+\textbf{"Entropy tends to increase!!!!"}
+
+\begin{tabular}{ |p{3.5cm}|p{3.5cm}|p{3.5cm}|p{3cm}|  }
+ \hline
+ \multicolumn{4}{|c|}{Overview} \\
+ \hline
+ Type of Interaction & Exchanged Quantity & Governing Variable & Formula\\
+ \hline
+ Thermal   & Energy    & Temperature &   $\frac{1}{T} = \left(\frac{\partial S}{\partial U}\right)_{V,N} $\\
+ Mechanical &   Volume  & Pressure   & $\frac{P}{T} = \left(\frac{\partial S}{\partial V}\right)_{U,N} $\\
+ Diffusive & Particles & Chemical Potential & $\frac{\mu}{T} = -\left(\frac{\partial S}{\partial N}\right)_{V,U} $\\
+ \hline
+\end{tabular}
+
+\textbf{3 key model systems:}\\ - the Two State Paramagnet\\ - the Einstein Solid\\ - the Monatomic Ideal Gas.
+
+\end{document}

@@ -1,0 +1,197 @@
+\def \secname {Energy in Thermal Physics}
+
+\section[\secname]{\hyperlink{toc}{\secname}}
+
+
+
+\subsection{Thermal Equilibrium}
+\textbf{Temperature} (operational definition): What you measure with a thermometer
+
+\textbf{Temperature} (theoretical definition): The thing that is the same for two objects, after they've been in contact long enough
+
+\textbf{Thermal Equilibrium}: 2 objects in contact for long enough
+
+\textbf{Relaxation Time}: Time taken to get to thermal equilibrium. (technically time to drop by a factor if e)
+
+\textbf{Diffusive Equilibrium}: ex. cream and coffee mixing; exchange of \textbf{particles}
+
+\textbf{Mechanical Equilibrium}: ex. expansion of balloon; exchange of \textbf{volume}
+
+\subsection{The Ideal Gas}
+\begin{shaded}
+\textbf{The Famous Ideal Gas Law} \newline
+\begin{equation}
+PV = nRT
+\end{equation}
+Where:
+\begin{equation*}
+\begin{split}
+P = \text{Pressure} \\
+V = \text{Volume} \\
+n = \text{number of moles of the gas}\\
+R = \text{Universal Constant; 8.31}\frac{J}{mol K}\\
+T = \text{Temperature in Kelvins}
+\end{split}
+\end{equation*}
+\end{shaded}
+
+\textbf{Conversions and Constants}:
+
+\[\text{Pa (pascals, SI base units for pressure)} = \frac{N}{m^2}\]
+\[1 \text{atm} = 1.013 \text{bar} = 1.013 \times 10^{5} Pa\]
+\[1 \text{bar} = 10^5Pa\]
+\[1 L = 0.001m^3\]
+\[1 mL = 1cm^3\]
+\[ 1eV = 1.602 \times 10^{-19}J\]
+\[ (\text{T in }^\circ C) = (\text{T in K}) - 273.15\]
+\[ (\text{T in }^\circ F) = \frac{9}{5}(\text{T in }^\circ C) +32\]
+\[1 \text{cal} = 4.186J\]
+\[1 u = 1.661 \times 10^{-27} kg\]
+
+\textbf{Boltzmann Constant:}
+\[k= 1.3806488 \times 10^{-23} \frac{J}{K}\ = 8.62 \times 10^{-5}\frac{eV}{K}\]
+\textbf{Avogadro's Number:}
+\[N_A = 6.02 \times 10^{23}\]
+\textbf{Gas Universal Constant:}
+\[R = k N_A = 8.3144621 \frac{J}{mol K}\]
+
+\textbf{Alternate Ideal Gas Law:}
+\[PV = NkT\]
+
+\[nR = Nk\]
+
+
+\subsection{The Equipartition of Energy}
+\begin{shaded}
+\textbf{Equipartition Theorem}\newline 
+At temp T, the average energy of an quadratic degree of freedom is $\frac{1}{2}kT$
+
+\begin{equation}
+U_{thermal} = Nf \frac{1}{2} kT
+\end{equation}
+Where:
+\begin{equation*}
+\begin{split}
+N = \text{Number of molecules} \\
+f = \text{Number of degrees of freedom} \\
+k = \text{Boltzmann Constant}\\
+T = \text{Temperature in Kelvins}
+\end{split}
+\end{equation*}
+\end{shaded}
+\begin{note}
+
+\textbf{$N_2$ and $O_2$ have f=5, Gas of Monatomic Molecules like Helium or Argon f=3, Solids have f=6}
+\end{note}
+
+
+\subsection{Heat and Work}
+\textbf{Heat} - Spontaneous Flow of energy from one object to another, caused by difference in temperature between objects \newline
+\textbf{Work} - Any other transfer of energy. Usually can identify external agent that actively puts energy into system.\newline
+\textbf{Energy} - Most fundamental dynamical concept in physics. Cannot be created or destroyed.\newline
+\textbf{Temperature} - Fundamentally an objects tendency to spontaneously give up energy \newline
+
+\begin{shaded}
+\textbf{The First Law of Thermodynamics}\newline 
+Essentially Conservation of Energy
+
+\begin{equation}
+dU = Q + W
+\end{equation}
+Where:
+\begin{equation*}
+\begin{split}
+U = \text{total energy inside a system} \\
+Q = \text{amount of energy that enters system as heat} \\
+W = \text{amount of energy that enters system as work}\\
+\end{split}
+\end{equation*}
+\end{shaded}
+
+
+\textbf{Heat Transfer Categories:} \\
+\textbf{Conduction}: molecular contact/bumping and transferring energy \\
+\textbf{Convection}: bulk motion of gas/liquid (usually warmer rises) \\
+\textbf{Radiation}: emission of EM waves, mostly infrared for objects at room temp but also visible for hot objects like lightbulbs.
+
+
+\subsection{Compression Work}
+\textbf{Quasistatic} - if piston is compressed slowly, gas has time to continually equilibrate to changing conditions (never perfectly).
+
+\begin{equation}
+W = -P \Delta V
+\end{equation}
+
+If pressure changes as you change the volume (still quasistatic):
+
+\begin{equation}
+    W = - \int_{V_i}^{V_f} P(V) dV
+\end{equation}
+
+\textbf{Isothermal Compression} - Compress gas slow that the temperature of th egas doesn't rise at all.
+\textbf{Adiabatic Compression} - Compress gas so fast that no heat escapes from gas during process.
+
+\subsection{Heat Capacities}
+
+\textbf{Heat Capacity} - The amount of heat needed to raise it's temperature, per degree temperature increase.
+\[C \equiv \frac{Q}{\Delta T} = \frac{\Delta U - W}{\Delta T}\]
+
+\textbf{Specific Heat Capacity} - Heat capacity per unit mass.
+\[c \equiv \frac{C}{m}\]
+\begin{shaded}
+\textbf{Heat Capacity at Constant Volume}
+\begin{equation}
+C_V = \left(\frac{\Delta U}{\Delta T}\right)_V = \left(\frac{\partial U}{\partial T}\right)_V
+\end{equation}
+\end{shaded}
+
+\textbf{Heat Capacity at Constant Pressure}
+\begin{equation}
+C_P = \left(\frac{\Delta U - (-P\Delta V)}{\Delta T}\right)_P = \left(\frac{\partial U}{\partial T}\right)_P + P\left(\frac{\partial V}{\partial T}\right)_P
+\end{equation}
+\textbf{Recall}
+Section 1.3 - Equipartition Theorem: $U_{thermal} = Nf \frac{1}{2} kT$
+\begin{note}
+$C_V$ for monatomic gas (f=3) (ex Helium) is $\frac{3}{2}Nk=\frac{3}{2}nR$. 
+
+\hspace{15mm} \textbf{Rule of Dulong and Petit} Heat capacity per mole for solid (f=6) is $3Nk=3nR$. 
+\end{note}
+
+\begin{shaded}
+\textbf{Heat capacity at constant pressure for Ideal Gas}
+\begin{equation}
+    C_P = C_V + Nk = C_V + nR
+\end{equation}
+\end{shaded}
+
+\textbf{Latent Heat}
+\textbf{phase transformation} - ex. melting ice or boiling water
+
+At phase transformation you can put heat into system without increasing the temperature.
+\[C=\frac{Q}{\Delta T} = \frac{Q}{0} = \infty\]
+Heat capacity is infinite during a phase transformation
+
+\textbf{Latent Heat} - How much heat is required for transformation (ex. melting water)
+\[ L \equiv \frac{Q}{m} \]
+\begin{note}
+By convention we assume pressure is constant (usually at 1 atm) and that no other work is being done besides the usual constant-pressure expansion/compression.
+\end{note}
+\textbf{Reference}:\\
+L for melting ice $ = 333\frac{J}{g}  = 80\frac{\text{cal}}{g}$ \\
+L for boiling water $ = 2260\frac{J}{g}  = 540\frac{\text{cal}}{g}$ \\
+Raising Water 0 to 100 requires only $100\frac{\text{cal}}{g}$
+
+\begin{shaded}
+\textbf{Enthalpy}
+\[H \equiv U + PV\]
+\begin{equation}
+    \Delta H = Q + W_{other} \text{ \hspace{10mm} ; constant P}
+\end{equation}
+\end{shaded}
+
+$\therefore$ for simple case of raising object's temperature:
+\[C_P = \left(\frac{\partial H}{\partial T}\right)_P \]
+
+\subsection{Rates of Processes}
+Not entirely thermodynamics, but related. "Transport Theory or Kinetics"\\
+Review this Chapter only if required

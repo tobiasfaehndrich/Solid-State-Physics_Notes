@@ -1,0 +1,171 @@
+\def \secname {The Second Law}
+
+\section[\secname]{\hyperlink{toc}{\secname}}
+
+
+\textit{"Irreversible processes are not inevitible, they are just overwhelmingly probable."}
+
+\subsection{Two-State System}
+\textbf{Microstate} - each different possible outcome in a system (ex. flipping 3 coins)\\
+\textbf{Macrostate} - a more general specification of the outcome\\
+\textbf{Multiplicity} - the number of microstates corresponding to a given macrostate. ($\Omega$ ; Omega)
+
+(total multiplicity of all macrostates is the total number of microstates)
+
+probability of n heads = $\frac{\Omega (n)}{\Omega (\text{all})}$
+
+$\Omega (N,n) = \frac{N!}{n!(N-n)!}$ ; nCr button on calculator
+
+\textbf{The Two-State Paramagnet}\\
+Dipoles: individual magnetic particles, either $\uparrow$ or $\downarrow$
+\[ \Omega (N\downarrow) = \Omega (N\uparrow) = \frac{N!}{N\uparrow!N\downarrow!} \]
+
+\subsection{The Einstein Model of a Solid}
+\[ \Omega (N,q) = \frac{(q+N-1)!}{q!(N-1)!}\]
+
+\subsection{Interacting Systems}
+
+ All \textbf{microstates are equally probably} BUT some \textbf{macrostates are much more probable} than others.
+ 
+ The spontaneous flow of energy stops when a system is at (or very near) it's most likely macrostate (i.e. the macrostate with greatest multiplicity)
+ 
+ \subsection{Large Systems}
+ 
+ Out of all the macrostates only a tiny fraction are reasonably probable.
+
+\textbf{Small Numbers} - like 6, 23 and 42
+
+\textbf{Large Numbers} - like Avogadro's Number, frequently made by exponentiating small numbers (ex. $10^{23}$). Adding a small number to a large number does not change the large number.\\
+\[10^{23} +23 = 10^{23} \]
+
+(exception for when you subtract the same large number: $10^{23} + 42 - 10^{23} = 42$)
+
+\textbf{Very Large Numbers} - made by exponentiating large numbers.
+(ex: $10^{10^{23}}$). You can multiply them by a Large number without changing them.
+\[10^{10^{23}} \times 10^{23} = 10^{10^{23}+23} =10^{10^{23}} \]
+
+\textbf{Other Useful Approximations}:
+
+\[\ln(1+x) \approx x ; \abs{x} \ll 1\]
+\[\ln(a+b) \approx \ln(a) + \frac{b}{a} ; b\ll a \]
+
+\begin{shaded}
+\textbf{Stirling's Approximation}
+\begin{equation}
+N! \approx N^Ne^{-N} \sqrt{2\pi N} ; N \gg 1
+\end{equation}
+Most of the time we can just use: 
+\[\ln{N!} \approx N\ln(N) - N\]
+\end{shaded}
+\newpage 
+
+\textbf{Multiplicity of Large Einstein Solids:}
+
+\[ \Omega (N,q) \approx e^{N\ln\left(\frac{q}{N}\right)} e^N = \left(\frac{eq}{N}\right)^N ; q \gg N \]
+
+\textbf{Thermodynamic Limit} - the limit where a system becomes infinitely large so that fluctuations away from the most likely macrostate never occur.
+
+\subsection{Ideal Gas}
+" Only a tiny fraction of the macrostates of a large interacting system have a reasonably large probabilities. "
+
+\[ \Omega (U,V,N) = f(N) V^N U^{\frac{3N}{2}} \]
+where f(N) is a complicated function of N
+
+\textbf{Interacting Ideal Gas:}
+\[ \Omega_{total} (U,V,N) = [f(N)]^2 (V_A V_B)^N (U_A U_B)^{\frac{3N}{2}} \]
+
+3D Width of Peak (U) = $\frac{U_{total}}{\sqrt{\frac{3N}{2}}}$
+
+3D Width of Peak (V) = $\frac{V_{total}}{\sqrt{N}}$
+
+\subsection{Entropy}
+Any large system in equilibrium will be found in the macrostate with the greatest multiplicity (aside from fluctuations that are normally too small to measure).
+
+i.e. Multiplicity tends to increase.
+
+\begin{shaded}
+\textbf{Entropy}
+\begin{equation}
+    S \equiv k\ln\Omega
+\end{equation}
+\end{shaded}
+" The logarithm of the number of ways of arranging things in the system, (times the Boltzmann Constant) "
+
+Generally the more particles there are in a system and the more energy it contains; the greater it's multiplicity and it's entropy.
+
+Other ways of increasing the Entropy of a system:\\
+- letting it expand into a larger space \\
+- breaking large molecules apart into smaller ones\\
+- mixing substances that were once separated
+
+\[ \text{Entropy} \approx \text{"disorder"} \]
+but be CAREFUL! 
+Glass of Ice vs Glass of equal amount of liquid water:
+
+Water has much more Entropy since there are so many more ways of arranging the molecules and so many more ways of arranging the larger amount of energy.
+
+Restate the Second Law of Thermodynamics:
+
+"Any large system in equilibrium will be found in the macrostate with the greatest \textbf{entropy} (aside from fluctuations that are normally too small to measure)."
+
+i.e. Entropy tends to increase
+
+\begin{shaded}
+\textbf{Entropy for an Ideal Gas}\\
+\textit{Sackur-Tetrode Equation:}
+\begin{equation}
+    S = Nk\left[\ln\left(\frac{V}{N} \left(\frac{4\pi m U}{3Nh^2}\right)^{\frac{3}{2}}\right)+\frac{5}{2} \right]
+\end{equation}
+\begin{note}
+The Entropy of a monatomic ideal gas, derived from Stirling's approximation and large number approximations
+\end{note}
+Where:
+\begin{equation*}
+\begin{split}
+N = \text{Number of gas molecules} \\
+k = \text{Boltzmann Constant} \\
+V = \text{Volume in}m^3 \\
+m = \text{mass in kg} \\
+U = \text{Total Energy} \\
+h = \text{Planck's Constant}
+\end{split}
+\end{equation*}
+\end{shaded}
+
+$\therefore$ The entropy of an ideal gas depends on it's volume, energy, and # of particles. 
+
+\begin{equation}
+    \Delta S = Nk\ln\left(\frac{V_f}{V_i}\right)  ; \hspace{10mm} \text{(U, N fixed)}
+\end{equation}
+
+ \newpage
+ For example:
+ 
+ \textbf{Free Expansion} - Gas separated by a partition from an evacuated chamber. We then puncture the partition, letting the gas freely expand to fill the whole available space. ($\Delta U = Q+W = 0+0 = 0$ and no new particles are added so $\Delta N = 0$ also)
+
+
+\textbf{Entropy of Mixing}
+- Mixing two different ideal gases 50/50 chambers
+\begin{equation}
+    \Delta S_{total} = \Delta S_A + \Delta S_B = 2Nk\ln(2)
+\end{equation}
+
+\textbf{Gibbs Paradox} - if we assume the molecules in gas are distinguishable, this leads to the second law being violated, i.e. entropy decreases. In reality scientist believe that molecules in gas are indistinguishable from one another which upholds the law as shown in the Sackur-Tetrode Equation.
+
+
+\textbf{Reversible and Irreversible Processes}
+If a physical process increases the total entropy of the universe, that process cannot happen in reverse.
+
+\textbf{Irreversible} - processes that create new entropy. ex: free expansion of a gas (very sudden)
+
+\textbf{Reversible} - process that leaves the total entropy of the universe unchanged. ex: gradual compression or expansion (must be quasistatic)
+
+\begin{note}
+No macroscopic process is perfectly reversible, some come close
+\end{note}
+
+Heat flow is always irreversible
+
+\textbf{Other highly irreversible processes:} Sunlight warming the earth, wood burning in the fireplace, metabolism of nutrients in our bodies, mixing of ingredients in the kitchen.
+
+Beginning of time -- super low-entropy, and now on our way to equilibrium but still a long time away from boring homogeneous fluid universe with max entropy ("heat death of the universe").
